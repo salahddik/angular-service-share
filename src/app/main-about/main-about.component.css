@@ -1,0 +1,34 @@
+/* Button styles */
+button {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  button:active {
+    transform: scale(0.95) rotate(3deg); /* Shrink and slightly rotate the button on click */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for more depth */
+  }
+  
+  button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly grow the button on hover */
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5); /* Blue outline when focused */
+  }
+  
+  /* Add a bounce animation on click */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    70% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+  
+  button:active {
+    animation: bounce 0.5s ease;
+  }
+  
